@@ -19,8 +19,6 @@ const App = () => {
     getCommits();
   }, []);
 
-  console.log(commits);
-
   return (
     <div className="wrapper">
       <div className="container">
@@ -38,7 +36,14 @@ const App = () => {
               const { message } = element.commit;
               const { html_url: htmlUrl } = element;
               return (
-                <div className="commit-container" key={index}>
+                <div
+                  className="commit-container"
+                  key={index}
+                  style={{
+                    animation: "fadeIn 1s forwards",
+                    animationDelay: `${index * 0.15}s`,
+                  }}
+                >
                   <p className="desc name">{name}</p>
                   <p className="desc date">
                     {format(new Date(date), "MMMM, dd yyyy h:mm aa")}
