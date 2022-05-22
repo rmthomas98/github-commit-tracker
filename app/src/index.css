@@ -15,7 +15,11 @@ html {
   font-size: 20px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.wrapper {
+  padding: 16px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
 }
