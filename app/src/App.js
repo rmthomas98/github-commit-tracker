@@ -25,7 +25,16 @@ const App = () => {
       <div className="container">
         {commits
           ? commits.map((element, index) => {
-              return <div className="commit-container"></div>;
+              const { name, date } = element.commit.author;
+              const { message, url } = element.commit;
+              return (
+                <div className="commit-container" key={index}>
+                  <p className="desc">{name}</p>
+                  <p className="desc">{date}</p>
+                  <p className="desc">{message}</p>
+                  <p className="desc">{url}</p>
+                </div>
+              );
             })
           : "Loading commits"}
       </div>

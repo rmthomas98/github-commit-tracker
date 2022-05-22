@@ -13,6 +13,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 20px;
+  background: #0c0c0c;
 }
 
 .wrapper {
@@ -22,4 +23,14 @@ html {
 .container {
   max-width: 1000px;
   margin: auto;
+}
+
+.commit-container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background: #ffffff09;
+  border: 1px solid #ffffff1a;
 }
