@@ -1,6 +1,14 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.12,
+* Autoprefixer: v10.4.4
+* Browsers: last 4 version
+*/
+
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -26,6 +34,8 @@ html {
 }
 
 .label-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 0px 14px;
   margin-bottom: 10px;
@@ -40,7 +50,11 @@ html {
 }
 
 .commit-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 14px;
   margin-bottom: 20px;
@@ -48,6 +62,8 @@ html {
   background: #ffffff05;
   border: 1px solid #ffffff10;
   opacity: 0;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
   transition: 300ms;
 }
 
@@ -73,26 +89,49 @@ html {
   text-decoration: none;
   color: #fff;
   border-radius: 8px;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
   min-width: fit-content;
   font-size: 70%;
   font-weight: 500;
+  -webkit-box-shadow: 0px 2px 10px #e734ff7c;
   box-shadow: 0px 2px 10px #e734ff7c;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
   transition: 300ms;
   margin-right: 0px;
 }
 
 .link-btn:hover {
+  -webkit-box-shadow: 0px 4px 16px #e734ffd3;
   box-shadow: 0px 4px 16px #e734ffd3;
+  -webkit-transform: scale(0.97);
+  -ms-transform: scale(0.97);
   transform: scale(0.97);
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
+    -webkit-transform: translateY(20px);
     transform: translateY(20px);
   }
   to {
     opacity: 1;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }
