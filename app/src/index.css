@@ -25,7 +25,8 @@ html {
 }
 
 .wrapper {
-  padding: 16px;
+  padding: 0px 16px;
+  padding-bottom: 50px;
 }
 
 .container {
@@ -37,8 +38,11 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0px 14px;
-  margin-bottom: 10px;
+  padding: 12px 14px;
+  position: sticky;
+  top: 0;
+  background: #050505;
+  z-index: 9999;
 }
 
 .label {
