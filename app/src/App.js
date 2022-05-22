@@ -26,13 +26,21 @@ const App = () => {
         {commits
           ? commits.map((element, index) => {
               const { name, date } = element.commit.author;
-              const { message, url } = element.commit;
+              const { message } = element.commit;
+              const { html_url: htmlUrl } = element;
               return (
                 <div className="commit-container" key={index}>
                   <p className="desc">{name}</p>
                   <p className="desc">{date}</p>
-                  <p className="desc">{message}</p>
-                  <p className="desc">{url}</p>
+                  <p className="desc message">{message}</p>
+                  <a
+                    href={htmlUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="link-btn"
+                  >
+                    View commit
+                  </a>
                 </div>
               );
             })
